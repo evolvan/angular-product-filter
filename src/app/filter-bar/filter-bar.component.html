@@ -1,0 +1,8 @@
+<div class="filter-bar clearfix">
+
+  <div class="filter-elem" (click)="changeStep(i)" [class.selected]="currentStep == i" *ngFor="let step of stepArray; let i = index">
+    <div class="filter-label">{{step.title}}</div>
+    <div class="filter-selection">{{getSelectionFromRange(step.range)}}</div>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="clearfix product-list">
+  <div class="product-case col-sm-4 text-center" *ngFor="let item of items">
+    <div class="clearfix">
+      <div class="col-sm-6">
+        <img class="product-thumbnail img-responsive" style="width:100px;" src="{{item.thumbnail}}"/>
+      </div>
+      <div class="col-sm-6">
+        <i class="fa fa-star" *ngFor="let index of range(item.rating)" aria-hidden="true"></i>
+        <i class="fa fa-star-o" *ngFor="let index of range(5 - item.rating)" aria-hidden="true"></i>
+      </div>
+    </div>
+    <h4 class="product-name text-center">{{item.model}}</h4>
+    <h4 class="product-price text-center">{{item.price | currency : currencyCode}}</h4>
+  </div>
+  <div class="text-center danger" *ngIf="!items.length">
+    <h3>Sorry No Product for your selected category.</h3>
+    <h4>Please Try going step back and choose another option. </h4>
+  </div>
+</div>

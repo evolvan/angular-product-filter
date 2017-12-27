@@ -1,0 +1,18 @@
+<div class="ruler clearfix theme-color">
+  <div class="direct-filter-segments">
+    <div class="segment-title col-sm-4 text-center" (click)="segmentClicked(i)" [class.highlighted]="item.selected" *ngFor="let item of labels; let i = index">
+      <span>{{item.title}}</span>
+    </div>
+
+  </div>
+
+  <div class="ruler-liner-wrap">
+    <div class="ruler-pointer-wrap">
+      <div class="ruler-pointer">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="ruler-liner"></div>
+  </div>
+
+</div>

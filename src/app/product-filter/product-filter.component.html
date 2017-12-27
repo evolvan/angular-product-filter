@@ -1,0 +1,39 @@
+<div class="coponent-cover">
+  <app-filter-bar [currentStep]="stepCounter" (stepChanged)="stepChangeCallback($event)" [stepArray]="setting.steps"></app-filter-bar>
+
+  <div class="clearfix text-center" *ngIf="!filterProcessComplete">
+    <h4>
+      Please set the slider to make the selection then click next or directly click on options.<br/>
+      Highlighted area shows the currently selected options.
+    </h4>
+
+    <div class="filter-step-nav-panel">
+      <button class="theme-btn" (click)="prevStep()" *ngIf="stepCounter > 0"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Prev </button>
+      <strong class="step-display"> {{stepCounter + 1}} of {{setting.steps.length}} : Select {{currentStep.title}} </strong>
+      <button class="theme-btn" (click)="nextStep()">Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+    </div>
+
+    <div class="sliderbox">
+      <app-range-slider (onSlide)="sliderFilter($event)"></app-range-slider>
+    </div>
+
+    <app-filter-scale [pointerValue]="slideValue" (clickHandle)="filterOptionClicked($event)" [pointerMax]="pointerMax" [labels]="currentStep.range"></app-filter-scale>
+
+    <div class="clearfix">
+      <div style="display:none;" class="col-sm-4 text-center column-btns" (click)="filterOptionClicked(i)" *ngFor="let range of currentStep.range; let i = index">
+        <p>{{range.description}}</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="clearfix text-center" *ngIf="filterProcessComplete">
+    <h3>Your filteration is complete</h3>
+    <div *ngIf="filterProcessComplete">
+      <button class="theme-btn" (click)="prevStep()"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Prev </button>
+    </div>
+  </div>
+
+
+  <app-product-listing [items]="filteredData"></app-product-listing>
+
+</div>

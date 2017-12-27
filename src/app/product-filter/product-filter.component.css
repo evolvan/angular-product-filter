@@ -1,0 +1,47 @@
+.coponent-cover{
+  color:#333;
+  margin-top:20px;
+}
+
+.step-title{
+  font-size:25px;
+  font-weight:bold;
+}
+
+.column-btns{
+  cursor:pointer;
+  padding:20px;
+}
+
+.product-list{
+  margin:60px 0;
+}
+
+.filter-step-nav-panel{
+  margin:20px 0;
+}
+
+.step-display{
+  display:inline-block;
+  padding:3px 10px;
+  font-size:20px;
+}
+
+.product-case{
+  padding:20px;
+  border:1px solid #e1e1e1;
+  height:200px;
+  box-sizing:border-box;
+  cursor:pointer;
+  color:rgb(197, 32, 24);
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.product-case:hover{
+  border:1px solid rgb(197, 32, 24);
+  border-bottom:12px solid rgb(197, 32, 24);
+}
+
+.product-name{
+  font-size:18px;
+}

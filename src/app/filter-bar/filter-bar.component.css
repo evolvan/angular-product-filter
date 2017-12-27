@@ -1,0 +1,34 @@
+
+.filter-bar{
+  margin:20px;
+  margin-top:0px;
+  background:rgba(220,20,21,.9);
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.filter-elem{
+  float:left;
+  font-family: 'Barlow Condensed', sans-serif;
+  padding:10px;
+  box-sizing:border-box;
+  width:20%;
+  height:70px;
+  cursor:pointer;
+}
+.filter-elem:hover{
+  background:rgba(0,20,21,.3);
+}
+.filter-elem.selected{
+  background:rgba(150,20,21,.9);
+}
+
+.filter-label{
+  color:#ff4;
+}
+
+.filter-selection{
+  font-weight:bold;
+  font-size:20px;
+  color:#fff;
+}
