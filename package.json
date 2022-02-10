@@ -30,7 +30,7 @@
     "jquery-range": "^1.0.0",
     "json-parse": "^1.0.3",
     "ngx-bootstrap": "^2.0.0-beta.8",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "npm-registry-fetch": "^11.0.0",
     "parse-json": "^5.2.0",
     "rxjs": "^5.5.2",
